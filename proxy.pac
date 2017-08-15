@@ -15,6 +15,10 @@ function FindProxyForURL(url, host) {
 		"google.com"
 	]
 	
+	if(shExpMatch(url, "*.google.com/*")){
+		return "SOCKS5 127.0.0.1:7070; DIRECT;";
+	}
+	
 	for(var i=0; i<list.length; i++){
 		if(isMathcProxy(url, list[i])){
 			return proxy_7070;
