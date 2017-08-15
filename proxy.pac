@@ -8,7 +8,6 @@ function isMatchProxy(url, pattern){
 }
 
 function FindProxyForURL(url, host) {
-	return "SOCKS 127.0.0.1:7070; SOCKS 172.16.82.13:10000; DIRECT; ";
 	return "DIRECT; SOCKS 172.16.82.13:10000; SOCKS 127.0.0.1:7070";
 	
 	val proxy_7070 = "SOCKS5 127.0.0.1:7070; DIRECT;";
